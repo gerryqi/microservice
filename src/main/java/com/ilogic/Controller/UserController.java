@@ -3,6 +3,7 @@ package com.ilogic.Controller;
 import com.ilogic.Repository.UserDao;
 import com.ilogic.models.User;
 import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,7 +22,9 @@ public class UserController {
     @RequestMapping("/create")
     @ResponseBody
     @ApiOperation(value="创建用户", notes="根据User对象创建用户")
-    @ApiImplicitParam(name = "user", value = "用户详细实体user", required = true, dataType = "User")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "email", value = "email", required = true, dataType = "String"),
+            @ApiImplicitParam(name = "name", required = true, dataType = "String")})
     public String create(String email, String name) {
         String userId = "";
         try {

@@ -53,6 +53,18 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.2.2</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.teradata</groupId>
+			<artifactId>terajdbc4</artifactId>
+			<version>13.10.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.teradata</groupId>
+			<artifactId>tdgssconfig</artifactId>
+			<version>13.10.0.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
