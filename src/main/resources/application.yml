@@ -1,12 +1,23 @@
 spring:
   datasource:
-    driverClassName: com.teradata.jdbc.TeraDriver
-    url: jdbc:teradata://10.0.2.150/TMODE=TERA,CHARSET=ASCII,CLIENT_CHARSET=cp936,DATABASE=xiaomingqi,lob_support=off
-    username: xiaomingqi
-    password: xiaomingqi
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: root
   jpa:
-    hibernate.ddl-auto: update
+    database: mysql
+    hibernate.ddl-auto:
     show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.TeradataDialect
+
+#  spring:
+#    datasource:
+#      driverClassName: com.teradata.jdbc.TeraDriver
+#      url: jdbc:teradata://10.0.2.150/TMODE=TERA,CHARSET=ASCII,CLIENT_CHARSET=cp936,DATABASE=xiaomingqi,lob_support=off
+#      username: xiaomingqi
+#      password: xiaomingqi
+#    jpa:
+#      hibernate.ddl-auto: update
+#      show-sql: true
+#      properties:
+#        hibernate:
+#          dialect: org.hibernate.dialect.TeradataDialect
